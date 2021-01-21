@@ -12,7 +12,9 @@ app.use("/public", express.static("assets"));
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "/index.html"));
+  res.sendFile(
+    path.join("https://moms-spaghetti-quotes.herokuapp.com//index.html")
+  );
 });
 
 app.get("/savedQuotes", async (req, res) => {
