@@ -2,7 +2,7 @@ const { Pool } = require("pg");
 require("dotenv").config();
 
 sqlConfig = {
-  connectionString: process.env.PG_URI,
+  connectionString: process.env.DATABASE_URL,
   ssl: { rejectUnauthorized: false },
 };
 
