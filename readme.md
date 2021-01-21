@@ -38,8 +38,8 @@ You will also need a URI string for the database (depending on where you host it
 
 You will need to create a .env in the root folder with two entries:
 
-- DATABASE*URL=*(enter your database database URI here)\_
-- PORT=_(set a port number to access the app locally, I recommend 5000)_
+- DATABASE_URL=(enter your database database URI here)
+- PORT=(set a port number to access the app locally, I recommend 5000)
   <br/><br/>
 
 ## Installation
