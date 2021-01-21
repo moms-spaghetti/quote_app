@@ -13,7 +13,7 @@ app.use(express.json());
 
 app.get("/", (req, res) => {
   res.sendFile(
-    path.join("https://moms-spaghetti-quotes.herokuapp.com//index.html")
+    path.join("https://moms-spaghetti-quotes.herokuapp.com/index.html")
   );
 });
 
