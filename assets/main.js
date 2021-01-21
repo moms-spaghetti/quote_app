@@ -8,8 +8,6 @@ const introText = document.querySelector("#introText");
 const userInput = document.querySelector("#userInput");
 const userButton = document.querySelector("#userButton");
 
-let currentUserId, currentUsername;
-
 function addQuote() {
   if (!quoteInput.value || !userInput.value) {
     alert("Please fill in the required fields");
@@ -26,7 +24,7 @@ function addQuote() {
 }
 
 async function addQuoteToDb(data) {
-  await fetch("http://localhost:5000/newQuotes", {
+  await fetch("/newQuotes", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(data), //could have a response sent here after quote sent to database to kick off addQuoteToList
@@ -34,7 +32,7 @@ async function addQuoteToDb(data) {
 }
 
 async function getQuoteList(callback) {
-  const response = await fetch("http://localhost:5000/savedQuotes");
+  const response = await fetch("/savedQuotes");
   const { payload } = await response.json();
   callback(payload);
 }
