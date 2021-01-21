@@ -1,18 +1,15 @@
-const { Pool } =require('pg');
-require('dotenv').config();
+const { Pool } = require("pg");
+require("dotenv").config();
 
 sqlConfig = {
-    host: process.env.HOST,
-    user: process.env.USER,
-    password: process.env.PASSWORD,
-    port: process.env.PORT,
-    database: process.env.DATABASE
-}
+  connectionString: process.env.PG_URI,
+  ssl: { rejectUnauthorized: false },
+};
 
 pool = new Pool(sqlConfig);
 
 module.exports = {
-    query: (sql, value, cb) => {
-        return pool.query(sql, value, cb);
-    }
-}
+  query: (sql, value, cb) => {
+    return pool.query(sql, value, cb);
+  },
+};
