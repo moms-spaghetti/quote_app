@@ -33,7 +33,7 @@ async function addQuoteToDb(data) {
 
 async function getQuoteList(callback) {
   const response = await fetch(
-    "https://moms-spaghetti-quotes.netlify.app//savedQuotes"
+    "https://moms-spaghetti-quotes.netlify.app/savedQuotes"
   );
   const { payload } = await response.json();
   callback(payload);
