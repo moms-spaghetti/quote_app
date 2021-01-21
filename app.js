@@ -1,7 +1,7 @@
 const express = require("express");
 const path = require("path");
 const app = express();
-const port = process.env.EXPRESS_PORT;
+const port = process.env.PORT;
 const {
   dbInsertQuote,
   dbGetQuoteList,
